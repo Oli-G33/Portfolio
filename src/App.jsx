@@ -7,11 +7,15 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carous
 const App = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const project1Images = [
-    '/project1-image1.jpg',
-    '/project1-image2.jpg',
-    '/project1-image2.jpg'
+    './images/project1-image1.png',
+    './images/project1-image2.png',
+    './images/project1-image3.png'
   ];
-  const project2Images = ['/project2-image1.jpg', '/project2-image2.jpg'];
+  const project2Images = [
+    './images/project2-image1.png',
+    './images/project2-image2.png',
+    './images/project2-image3.png'
+  ];
   const project3Images = ['/project3-image1.jpg', '/project3-image2.jpg'];
 
   useEffect(() => {
@@ -40,8 +44,21 @@ const App = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project Cards */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-              <p className="text-gray-400 mb-4">Description of Project 1.</p>
+              <h3 className="text-xl font-semibold mb-2">LinkUp</h3>
+              <p className="text-gray-400 mb-4">
+                LinkUp is a dynamic social media platform that I developed using
+                MERN stack. The platform allows users to connect with each other
+                and share updates.{' '}
+              </p>
+              <p className="text-gray-400 mb-4">
+                {' '}
+                The project utilizes React for the front-end, Node.js and
+                Express for the back-end, and MongoDB for the database. For
+                styling, I have selected Material UI and implemented a dark
+                mode. Overall, LinkUp is a project that showcases my skills in
+                web development and my ability to create complex applications
+                using the MERN stack.
+              </p>
               <Carousel showArrows={true} dynamicHeight={false}>
                 {project1Images.map((imageUrl, index) => (
                   <div key={index}>
@@ -50,38 +67,52 @@ const App = () => {
                 ))}
               </Carousel>
               <a
-                href="#"
+                href="https://linkup-gjpb.onrender.com/"
                 className="text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View on GitHub
+                View project
               </a>
             </div>
             <div className="bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Project 2</h3>
-              <p className="text-gray-400 mb-4">Description of Project 2.</p>
+              <h3 className="text-xl font-semibold mb-2">Dashboard</h3>
+              <p className="text-gray-400 mb-4">
+                The dashboard website I developed using MERN stack and Material
+                UI dark theme is a powerful tool for businesses to visualize and
+                track their key performance metrics.
+              </p>{' '}
+              <p className="text-gray-400 mb-4">
+                With a focus on clean design and intuitive navigation, this
+                dashboard offers users an easy way to monitor a company's
+                performance in real-time. The front-end is built with React and
+                Material UI, while the back-end is powered by Node.js and
+                Express. MongoDB is used as the database to store the necessary
+                data. Overall, the dashboard website is a valuable tool for
+                businesses looking to track and visualize their performance
+                metrics in a user-friendly and efficient way.
+              </p>
               <Carousel showArrows={true} dynamicHeight={false}>
-                {project1Images.map((imageUrl, index) => (
+                {project2Images.map((imageUrl, index) => (
                   <div key={index}>
                     <img src={imageUrl} alt={`Project 2 Image ${index + 1}`} />
                   </div>
                 ))}
               </Carousel>
               <a
-                href="#"
+                href="https://schnell-finder.onrender.com/dashboard"
                 className="text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View on GitHub
+                View project
               </a>
             </div>
-            <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+            {/* <div className="bg-gray-700 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Project 3</h3>
               <p className="text-gray-400 mb-4">Description of Project 3.</p>
               <Carousel showArrows={true} dynamicHeight={false}>
-                {project1Images.map((imageUrl, index) => (
+                {project3Images.map((imageUrl, index) => (
                   <div key={index}>
                     <img src={imageUrl} alt={`Project 3 Image ${index + 1}`} />
                   </div>
@@ -95,7 +126,7 @@ const App = () => {
               >
                 View on GitHub
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
