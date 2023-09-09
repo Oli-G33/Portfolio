@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import AboutMe from './components/AboutMe';
 
 const App = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -37,13 +38,14 @@ const App = () => {
           </div>
         </div>
       </header>
+      <AboutMe />
 
-      <section className="bg-gray-800 py-16">
-        <div className="container mx-auto">
+      <section className="bg-gray-700 py-16">
+        <div className="container mx-auto ">
           <h2 className="text-2xl font-semibold text-center mb-8">Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 ">
             {/* Project Cards */}
-            <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+            <div className="bg-gray-600 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">LinkUp</h3>
               <p className="text-gray-400 mb-4">
                 LinkUp is a dynamic social media platform that I developed using
@@ -59,7 +61,11 @@ const App = () => {
                 web development and my ability to create complex applications
                 using the MERN stack.
               </p>
-              <Carousel showArrows={true} dynamicHeight={false}>
+              <Carousel
+                showArrows={true}
+                dynamicHeight={false}
+                infiniteLoop={true}
+              >
                 {project1Images.map((imageUrl, index) => (
                   <div key={index}>
                     <img src={imageUrl} alt={`Project 1 Image ${index + 1}`} />
@@ -75,24 +81,28 @@ const App = () => {
                 View project
               </a>
             </div>
-            <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+            <div className="bg-gray-600 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Dashboard</h3>
               <p className="text-gray-400 mb-4">
                 The dashboard website I developed using MERN stack and Material
-                UI dark theme is a powerful tool for businesses to visualize and
-                track their key performance metrics.
+                UI is a powerful tool for businesses to visualize and track
+                their key performance metrics. With a focus on clean design and
+                intuitive navigation, this dashboard offers users an easy way to
+                monitor a company's performance in real-time.
               </p>{' '}
               <p className="text-gray-400 mb-4">
-                With a focus on clean design and intuitive navigation, this
-                dashboard offers users an easy way to monitor a company's
-                performance in real-time. The front-end is built with React and
-                Material UI, while the back-end is powered by Node.js and
-                Express. MongoDB is used as the database to store the necessary
-                data. Overall, the dashboard website is a valuable tool for
-                businesses looking to track and visualize their performance
-                metrics in a user-friendly and efficient way.
+                The front-end is built with React and Material UI, while the
+                back-end is powered by Node.js and Express. MongoDB is used as
+                the database to store the necessary data. Overall, the dashboard
+                website is a valuable tool for businesses looking to track and
+                visualize their performance metrics in a user-friendly and
+                efficient way.
               </p>
-              <Carousel showArrows={true} dynamicHeight={false}>
+              <Carousel
+                showArrows={true}
+                dynamicHeight={false}
+                infiniteLoop={true}
+              >
                 {project2Images.map((imageUrl, index) => (
                   <div key={index}>
                     <img src={imageUrl} alt={`Project 2 Image ${index + 1}`} />
@@ -156,15 +166,30 @@ const App = () => {
       </section>
 
       <section className="bg-gray-700 py-16">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
-          <p className="text-gray-400 mb-8">Feel free to reach out!</p>
-          <a
-            href="mailto:ngarcia333@gmail.com"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-xl"
-          >
-            Email Me
-          </a>
+        <div className="container mx-auto flex flex-col sm:flex-row lg:flex-row items-center justify-center">
+          <div className="text-center mx-8 my-2">
+            <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
+            <p className="text-gray-400 mb-8">Feel free to reach out!</p>
+            <a
+              href="mailto:ngarcia333@gmail.com"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-xl"
+            >
+              Send Email
+            </a>
+          </div>
+
+          <div className="text-center mx-8 my-2">
+            <h2 className="text-2xl font-semibold mb-4">View Full Resume</h2>
+            <p className="text-gray-400 mb-8">Check it out!</p>
+            <a
+              href="../public/images/Oliver_Garcia_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-xl"
+            >
+              See Resume
+            </a>
+          </div>
         </div>
       </section>
 
