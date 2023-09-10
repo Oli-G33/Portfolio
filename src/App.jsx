@@ -180,7 +180,7 @@ const App = () => {
 
           <div className="mx-8 my-2 text-center">
             <h2 className="mb-4 text-2xl font-semibold">View Full Resume</h2>
-            <p className="mb-8 text-gray-400">Check it out!</p>
+            <p className="mb-8 text-gray-400">Take a Look!</p>
             <a
               href="../images/Oliver_Garcia_CV.pdf"
               target="_blank"
