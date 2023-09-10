@@ -178,7 +178,7 @@ const App = () => {
             </a>
           </div>
 
-          <div className="mx-8 my-2 text-center">
+          <div className="mx-8 my-2 mt-8 text-center md:mt-2">
             <h2 className="mb-4 text-2xl font-semibold">View Full Resume</h2>
             <p className="mb-8 text-gray-400">Take a Look!</p>
             <a
