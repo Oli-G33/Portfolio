@@ -4,6 +4,9 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import AboutMe from './components/AboutMe';
+import 'animate.css';
+import HeroSection from './components/Hero';
+import { animateScroll as scroll } from 'react-scroll';
 
 const App = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -25,19 +28,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen text-white bg-gray-900">
-      <header className="py-10">
-        <div className="container flex items-center justify-center mx-auto">
-          <img
-            src="/profile-image.png"
-            alt="Profile-img"
-            className="w-16 h-16 mr-4 rounded-full"
-          />
-          <div className="text-center">
-            <h1 className="text-4xl font-bold">Oliver Garcia</h1>
-            <p className="mt-2 text-xl">Full Stack Developer</p>
-          </div>
-        </div>
+      <header>
+        <HeroSection />
       </header>
+
       <AboutMe />
 
       <section className="py-16 bg-gray-700">
