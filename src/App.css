@@ -49,7 +49,7 @@
 
 .hero {
   background-image: url('../public/heroImg.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
   color: white;
@@ -111,17 +111,17 @@
 }
 
 .logo-not-scrolling {
-  width: 3rem; /* Set the original width for the logo when not scrolling */
-  height: 3rem; /* Set the original height for the logo when not scrolling */
+  width: 2.5rem; /* Set the original width for the logo when not scrolling */
+  height: 2.5rem; /* Set the original height for the logo when not scrolling */
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* Add a transition for width and height */
 }
 
 .navbar-not-scrolling {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* Set the original background color with full transparency */
-  transition: opacity 3s ease-in-out; /* Add a transition for opacity */
+  background-color: transparent; /* Set the original background color to transparent */
+  transition: background-color 1s ease-in-out; /* Add a transition for background-color */
+}
+
+.navbar-scrolling {
+  background-color: rgba(0, 0, 0, 0.3); /* Set the final background color */
+  transition: background-color 1s ease-in-out; /* Add a transition for background-color */
 }

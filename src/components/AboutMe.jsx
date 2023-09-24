@@ -15,7 +15,7 @@ const AboutMe = () => {
           <img
             src="/profile-image.png"
             alt="Profile-img"
-            className="w-24 h-24 mx-auto mb-4 rounded-full"
+            className="w-24 h-24 mx-auto mb-4 rounded-full mt-7"
           />
           <h2 className="text-2xl font-semibold text-white">About Me</h2>
         </div>

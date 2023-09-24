@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -49,11 +51,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-10 ${
-        scrolling ? 'bg-gray-800' : 'navbar-not-scrolling'
+        scrolling ? 'bg-gray-800 transition-all duration-500' : 'bg-transparent'
       }`}
-      style={{ height: navbarHeight, transition: 'height 0.6s ease-in-out' }}
+      style={{ height: navbarHeight }}
     >
-      <div className="container px-4 py-4 mx-auto">
+      <div className="container px-8 py-4 mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img
@@ -122,7 +124,7 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            {/* Implement your mobile menu toggle here */}
+            <FontAwesomeIcon icon={faBars} style={{ color: '#ffffff' }} />
           </div>
         </div>
       </div>

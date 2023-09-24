@@ -38,7 +38,7 @@ const App = () => {
             <h2 className="mb-8 text-2xl font-semibold text-center">
               Connect with Me
             </h2>
-            <div className="flex justify-center mb-10 space-x-6">
+            <div className="flex justify-center mt-2 mb-10 space-x-6">
               <a
                 href="https://github.com/Oli-G33"
                 target="_blank"
@@ -68,7 +68,7 @@ const App = () => {
               </a>
             </div>
 
-            <div className="mx-8 my-2 mt-8 text-center md:mt-2">
+            <div className="mx-8 my-2 mt-8 text-center sm:mt-2">
               <h2 className="mb-4 text-2xl font-semibold">View Full Resume</h2>
               <p className="mb-8 text-gray-400">Take a Look!</p>
               <a
