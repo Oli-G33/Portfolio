@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img
-              src="../../public/images/NavLogo.png"
+              src="../../images/NavLogo.png"
               alt="Logo"
               className={`w-10 h-10 mx-4 ${
                 scrolling ? 'logo-scrolling' : 'logo-not-scrolling'
@@ -65,7 +65,7 @@ const Navbar = () => {
               style={{ filter: 'invert(100%)' }}
             />
             <span
-              className={`text-xl font-semibold text-white ${
+              className={`text-lg md:text-xl font-semibold text-white ${
                 scrolling ? 'icon-scrolling' : 'icon-not-scrolling'
               }`}
             >
