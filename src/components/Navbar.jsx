@@ -35,7 +35,7 @@ const Navbar = () => {
           {/* Left Section */}
           <div className="flex items-center">
             <img
-              src="../../public/NavLogo.png"
+              src="../../images/NavLogo.png"
               alt="Logo"
               className={`w-10 h-10 mx-4 ${
                 scrolling ? 'logo-scrolling' : 'logo-not-scrolling'
