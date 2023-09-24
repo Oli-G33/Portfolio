@@ -30,12 +30,15 @@ const App = () => {
 
         <Projects />
 
-        <section id="contact-section" className="py-16 bg-gray-800">
+        <section
+          id="contact-section"
+          className="min-h-screen pt-16 bg-gray-800"
+        >
           <div className="container mx-auto">
             <h2 className="mb-8 text-2xl font-semibold text-center">
               Connect with Me
             </h2>
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center mb-10 space-x-6">
               <a
                 href="https://github.com/Oli-G33"
                 target="_blank"
@@ -52,10 +55,8 @@ const App = () => {
               </a>
             </div>
           </div>
-        </section>
 
-        <section className="py-16 bg-gray-700">
-          <div className="container flex flex-col items-center justify-center mx-auto sm:flex-row lg:flex-row">
+          <div className="container flex flex-col items-center justify-center py-16 mx-auto bg-gray-700 sm:flex-row lg:flex-row">
             <div className="mx-8 my-2 text-center">
               <h2 className="mb-4 text-2xl font-semibold">Contact Me</h2>
               <p className="mb-8 text-gray-400">Feel free to reach out!</p>

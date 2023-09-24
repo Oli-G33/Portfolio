@@ -1,16 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
-  // Scroll event listener to change the background color on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setScrolling(true);
       } else {
         setScrolling(false);
+      }
+
+      // Determine the active section based on scroll position
+      const aboutSection = document.getElementById('about-section');
+      const projectsSection = document.getElementById('projects-section');
+      const contactSection = document.getElementById('contact-section');
+
+      if (
+        aboutSection &&
+        window.scrollY >= aboutSection.offsetTop &&
+        window.scrollY < projectsSection.offsetTop
+      ) {
+        setActiveSection('about-section');
+      } else if (
+        projectsSection &&
+        window.scrollY >= projectsSection.offsetTop &&
+        window.scrollY < contactSection.offsetTop
+      ) {
+        setActiveSection('projects-section');
+      } else if (contactSection && window.scrollY >= contactSection.offsetTop) {
+        setActiveSection('contact-section');
+      } else {
+        setActiveSection('');
       }
     };
 
@@ -32,61 +55,74 @@ const Navbar = () => {
     >
       <div className="container px-4 py-4 mx-auto">
         <div className="flex items-center justify-between">
-          {/* Left Section */}
           <div className="flex items-center">
             <img
-              src="../../images/NavLogo.png"
+              src="../../public/images/NavLogo.png"
               alt="Logo"
               className={`w-10 h-10 mx-4 ${
                 scrolling ? 'logo-scrolling' : 'logo-not-scrolling'
-              }`} // Apply the appropriate class based on scrolling
+              }`}
               style={{ filter: 'invert(100%)' }}
             />
-
             <span
               className={`text-xl font-semibold text-white ${
                 scrolling ? 'icon-scrolling' : 'icon-not-scrolling'
-              }`} // Apply the appropriate class based on scrolling
+              }`}
             >
               OLIVER GARCIA
             </span>
           </div>
 
-          {/* Right Section */}
           <div className="hidden space-x-6 md:flex">
             <Link
               to="about-section"
-              className="text-white hover:text-gray-400"
+              className={`text-white hover:text-gray-400 ${
+                activeSection === 'about-section' ? 'bg-gray-600' : ''
+              }`}
               smooth={true}
               duration={700}
             >
-              About
+              <button
+                className="text-white bg-transparent border-none outline-none focus:outline-none"
+                style={{ cursor: 'pointer' }}
+              >
+                About
+              </button>
             </Link>
             <Link
               to="projects-section"
-              className="text-white hover:text-gray-400"
+              className={`text-white hover:text-gray-400 ${
+                activeSection === 'projects-section' ? 'bg-gray-600' : ''
+              }`}
               smooth={true}
               duration={700}
             >
-              Projects
+              <button
+                className="text-white bg-transparent border-none outline-none focus:outline-none"
+                style={{ cursor: 'pointer' }}
+              >
+                Projects
+              </button>
             </Link>
             <Link
               to="contact-section"
-              className="text-white hover:text-gray-400"
+              className={`text-white hover:text-gray-400 ${
+                activeSection === 'contact-section' ? 'bg-gray-600' : ''
+              }`}
               smooth={true}
               duration={700}
             >
-              Contact
+              <button
+                className="text-white bg-transparent border-none outline-none focus:outline-none"
+                style={{ cursor: 'pointer' }}
+              >
+                Contact
+              </button>
             </Link>
           </div>
 
-          {/* Mobile Menu (Hamburger Icon) */}
           <div className="md:hidden">
-            {/* You can implement a mobile menu toggle here */}
-            {/* Example: */}
-            {/* <button onClick={toggleMobileMenu}>
-              <i className="text-2xl text-white fas fa-bars"></i>
-            </button> */}
+            {/* Implement your mobile menu toggle here */}
           </div>
         </div>
       </div>

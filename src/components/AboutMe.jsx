@@ -19,7 +19,7 @@ const AboutMe = () => {
           />
           <h2 className="text-2xl font-semibold text-white">About Me</h2>
         </div>
-        <div className="px-8 text-center">
+        <div className="text-center md:px-8">
           <p className="mb-4 text-gray-400 ">
             Hi there! I'm a passionate web developer who is excited to embark on
             this journey of creating amazing digital experiences. While I may
