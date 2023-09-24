@@ -9,10 +9,7 @@ import '../App.css';
 
 const AboutMe = () => {
   return (
-    <section
-      id="about-section"
-      className="min-h-screen px-16 py-8 bg-gray-800 m:py-16"
-    >
+    <section id="about-section" className="min-h-screen px-16 py-8 bg-gray-800">
       <div className="container grid items-center grid-cols-1 gap-8 mx-auto text-center">
         <div>
           <img
@@ -22,7 +19,7 @@ const AboutMe = () => {
           />
           <h2 className="text-2xl font-semibold text-white">About Me</h2>
         </div>
-        <div className="px-24 text-center">
+        <div className="px-8 text-center">
           <p className="mb-4 text-gray-400 ">
             Hi there! I'm a passionate web developer who is excited to embark on
             this journey of creating amazing digital experiences. While I may

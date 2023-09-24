@@ -93,3 +93,35 @@
 .spin:hover {
   transform: rotate(360deg);
 }
+
+.icon-scrolling {
+  font-size: 1rem; /* Set the initial icon size when scrolling */
+  transition: font-size 0.5s ease-in-out; /* Add a transition for font-size */
+}
+
+.icon-not-scrolling {
+  font-size: 1.5rem; /* Set the original icon size when not scrolling */
+  transition: font-size 0.5s ease-in-out; /* Add a transition for font-size */
+}
+
+.logo-scrolling {
+  width: 2rem; /* Set the initial width for the logo when scrolling */
+  height: 2rem; /* Set the initial height for the logo when scrolling */
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* Add a transition for width and height */
+}
+
+.logo-not-scrolling {
+  width: 3rem; /* Set the original width for the logo when not scrolling */
+  height: 3rem; /* Set the original height for the logo when not scrolling */
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* Add a transition for width and height */
+}
+
+.navbar-not-scrolling {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Set the original background color with full transparency */
+  transition: opacity 3s ease-in-out; /* Add a transition for opacity */
+}
