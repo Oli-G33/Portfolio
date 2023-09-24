@@ -14,7 +14,7 @@ const HeroSection = () => {
         <Link
           className="text-white transition-colors duration-300 hover:text-white"
           to="about-section"
-          style={{ position: 'absolute', bottom: '50px' }}
+          style={{ position: 'absolute', bottom: '60px' }}
           smooth={true}
           duration={700}
         >

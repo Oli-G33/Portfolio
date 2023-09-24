@@ -44,21 +44,23 @@ const AboutMe = () => {
           </p>
         </div>
         <div className="flex justify-center my-6">
-          <div className="flex flex-col mx-16 flip-on-hover">
+          <div className="flex flex-col mx-16 ">
             <FontAwesomeIcon
               icon={faKeyboard}
               style={{ color: '#ffffff', fontSize: '64px' }}
+              className="flip-on-hover"
             />
             <small>Web Developer</small>
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <FontAwesomeIcon
               icon={faMountainSun}
               style={{ color: '#ffffff', fontSize: '60px' }}
+              className="spin"
             />
             <small className="mt-1">Nature Explorer</small>
           </div>
-          <div className="flex flex-col mx-16 bounce-on-hover ">
+          <div className="flex flex-col mx-16">
             <FontAwesomeIcon
               icon={faPaw}
               flip="horizontal"
@@ -67,6 +69,7 @@ const AboutMe = () => {
                 '--fa-secondary-color': '#f4f5f5',
                 fontSize: '60px'
               }}
+              className="bounce-on-hover"
             />
             <small className="mt-1">Animal Enthusiast</small>
           </div>

@@ -85,3 +85,11 @@
 .flip-on-hover:hover {
   transform: rotateX(360deg);
 }
+
+.spin {
+  transition: transform 0.5s;
+}
+
+.spin:hover {
+  transform: rotate(360deg);
+}
