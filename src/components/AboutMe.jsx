@@ -6,13 +6,12 @@ import {
   faPaw
 } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
-import 'animate.css';
 
 const AboutMe = () => {
   return (
     <section
       id="about-section"
-      className="min-h-screen px-16 py-16 bg-gray-800"
+      className="min-h-screen px-16 py-8 bg-gray-800 m:py-16"
     >
       <div className="container grid items-center grid-cols-1 gap-8 mx-auto text-center">
         <div>
@@ -23,7 +22,7 @@ const AboutMe = () => {
           />
           <h2 className="text-2xl font-semibold text-white">About Me</h2>
         </div>
-        <div className="px-24 text-center w-68 ">
+        <div className="px-24 text-center">
           <p className="mb-4 text-gray-400 ">
             Hi there! I'm a passionate web developer who is excited to embark on
             this journey of creating amazing digital experiences. While I may
@@ -44,8 +43,8 @@ const AboutMe = () => {
             share together.
           </p>
         </div>
-        <div className="flex justify-center my-6 ">
-          <div className="flex flex-col mx-16 animate__animated animate__tada">
+        <div className="flex justify-center my-6">
+          <div className="flex flex-col mx-16 flip-on-hover">
             <FontAwesomeIcon
               icon={faKeyboard}
               style={{ color: '#ffffff', fontSize: '64px' }}
@@ -69,7 +68,7 @@ const AboutMe = () => {
                 fontSize: '60px'
               }}
             />
-            <small className="mt-1">Animal Advocate</small>
+            <small className="mt-1">Animal Enthusiast</small>
           </div>
         </div>
       </div>
