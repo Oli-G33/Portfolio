@@ -49,7 +49,7 @@
 
 .hero {
   background-image: url('../public/heroImg.jpg');
-  background-size: cover;
+  background-size: 100% auto;
   background-attachment: fixed;
   background-position: center;
   color: white;
