@@ -123,7 +123,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden text-2xl md:text-4xl">
             <FontAwesomeIcon icon={faBars} style={{ color: '#ffffff' }} />
           </div>
         </div>
