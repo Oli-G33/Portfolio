@@ -61,7 +61,7 @@ const Navbar = () => {
             <img
               src="../../images/NavLogo.png"
               alt="Logo"
-              className={`w-10 h-10 mx-4 ${
+              className={`w-8 h-8 md:w-10 md:h-10 mx-4 ${
                 scrolling ? 'logo-scrolling' : 'logo-not-scrolling'
               }`}
               style={{ filter: 'invert(100%)' }}
